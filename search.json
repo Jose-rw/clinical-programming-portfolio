@@ -1,31 +1,52 @@
 [
   {
-    "objectID": "projects/sas-oncology-report.html",
-    "href": "projects/sas-oncology-report.html",
-    "title": "Oncology Report in SAS",
+    "objectID": "project_template.html",
+    "href": "project_template.html",
+    "title": "{{title}}",
     "section": "",
-    "text": "This project demonstrates how to create a demographic table in SAS using PROC REPORT.\n\n\nPROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;\n\n\n\nIn clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
+    "text": "This project compares the implementation of {{analysis_type}} using SAS and R."
   },
   {
-    "objectID": "projects/sas-oncology-report.html#example-code",
-    "href": "projects/sas-oncology-report.html#example-code",
-    "title": "Oncology Report in SAS",
+    "objectID": "project_template.html#objective",
+    "href": "project_template.html#objective",
+    "title": "{{title}}",
     "section": "",
-    "text": "PROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;"
+    "text": "This project compares the implementation of {{analysis_type}} using SAS and R."
   },
   {
-    "objectID": "projects/sas-oncology-report.html#explanation",
-    "href": "projects/sas-oncology-report.html#explanation",
-    "title": "Oncology Report in SAS",
+    "objectID": "projects/r-survival-analysis.html",
+    "href": "projects/r-survival-analysis.html",
+    "title": "Survival Analysis in R",
     "section": "",
-    "text": "In clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
+    "text": "This project demonstrates Kaplan-Meier estimation using survival and ggplot2 in R.\n\n\nlibrary(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)\n\n\n\nSurvival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "projects/r-survival-analysis.html#example-code",
+    "href": "projects/r-survival-analysis.html#example-code",
+    "title": "Survival Analysis in R",
     "section": "",
-    "text": "Clinical Programming Projects\nWelcome to my projects section. Below are some real examples demonstrating both SAS and R techniques applied to oncology clinical trials.\n\nOncology Report in SAS\nSurvival Analysis in R"
+    "text": "library(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)"
+  },
+  {
+    "objectID": "projects/r-survival-analysis.html#explanation",
+    "href": "projects/r-survival-analysis.html#explanation",
+    "title": "Survival Analysis in R",
+    "section": "",
+    "text": "Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
+  },
+  {
+    "objectID": "projects/demographic-table.html",
+    "href": "projects/demographic-table.html",
+    "title": "Demographic Table: SAS vs R",
+    "section": "",
+    "text": "This project demonstrates how to generate a demographic table in clinical trials using SAS (PROC REPORT) and R (gt package)."
+  },
+  {
+    "objectID": "projects/demographic-table.html#objective",
+    "href": "projects/demographic-table.html#objective",
+    "title": "Demographic Table: SAS vs R",
+    "section": "",
+    "text": "This project demonstrates how to generate a demographic table in clinical trials using SAS (PROC REPORT) and R (gt package)."
   },
   {
     "objectID": "clinical-programming-portfolio-full/projects/sas-oncology-report.html",
@@ -126,24 +147,31 @@
     "text": "Welcome to my Clinical Programming Portfolio!"
   },
   {
-    "objectID": "projects/r-survival-analysis.html",
-    "href": "projects/r-survival-analysis.html",
-    "title": "Survival Analysis in R",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "This project demonstrates Kaplan-Meier estimation using survival and ggplot2 in R.\n\n\nlibrary(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)\n\n\n\nSurvival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
+    "text": "Clinical Programming Projects\nWelcome to my projects section. Below are some real examples demonstrating both SAS and R techniques applied to oncology clinical trials.\n\nOncology Report in SAS\nSurvival Analysis in R"
   },
   {
-    "objectID": "projects/r-survival-analysis.html#example-code",
-    "href": "projects/r-survival-analysis.html#example-code",
-    "title": "Survival Analysis in R",
+    "objectID": "projects/sas-oncology-report.html",
+    "href": "projects/sas-oncology-report.html",
+    "title": "Oncology Report in SAS",
     "section": "",
-    "text": "library(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)"
+    "text": "This project demonstrates how to create a demographic table in SAS using PROC REPORT.\n\n\nPROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;\n\n\n\nIn clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
   },
   {
-    "objectID": "projects/r-survival-analysis.html#explanation",
-    "href": "projects/r-survival-analysis.html#explanation",
-    "title": "Survival Analysis in R",
+    "objectID": "projects/sas-oncology-report.html#example-code",
+    "href": "projects/sas-oncology-report.html#example-code",
+    "title": "Oncology Report in SAS",
     "section": "",
-    "text": "Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
+    "text": "PROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;"
+  },
+  {
+    "objectID": "projects/sas-oncology-report.html#explanation",
+    "href": "projects/sas-oncology-report.html#explanation",
+    "title": "Oncology Report in SAS",
+    "section": "",
+    "text": "In clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
   }
 ]
