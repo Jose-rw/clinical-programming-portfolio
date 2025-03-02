@@ -1,0 +1,46 @@
+
+---
+title: "Migrating from SAS to R in Clinical Programming"
+date: 2025-03-02
+format: html
+---
+
+# Migrating from SAS to R
+
+## Example 1: PROC REPORT to gt Table
+
+```sas
+/* Original SAS code */
+PROC REPORT DATA=adsl;
+    COLUMN age sex race;
+RUN;
+```
+
+```r
+# Equivalent in R (gt table)
+library(gt)
+adsl |> gt()
+```
+
+## Example 2: PROC LIFETEST to survfit Kaplan-Meier
+
+```sas
+/* Original SAS code */
+PROC LIFETEST DATA=adtte PLOTS=survival;
+    TIME aval*cnsr(1);
+    STRATA trtp;
+RUN;
+```
+
+```r
+# Equivalent in R (survfit + ggplot2)
+library(survival)
+library(ggplot2)
+
+km_fit <- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)
+
+# Plot Kaplan-Meier Curve
+ggsurvplot(km_fit)
+```
+
+These are just a couple of examples showing how the **thinking process** can stay the same, even if the **syntax** changes.

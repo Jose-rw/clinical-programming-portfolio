@@ -1,0 +1,15 @@
+
+---
+title: "Agile Methodologies"
+format: html
+---
+
+# Agile in Clinical Programming
+
+As the clinical programming industry evolves, the need for agility grows stronger. Traditional waterfall models are being replaced with **Scrum-inspired approaches**, where cross-functional teams collaborate continuously.
+
+- Sprint-based programming (TFL production in cycles).
+- Early validation and continuous feedback.
+- Collaboration between data management, programming, and biostatistics.
+
+This section will grow as I continue exploring and applying **Agile methodologies** in clinical programming.

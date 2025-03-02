@@ -1,0 +1,15 @@
+
+---
+title: "About Me"
+format: html
+---
+
+# About Me
+
+My journey started in Electronic Engineering, but I soon realized I wanted to work closer to the healthcare field. That’s how I transitioned into Biomedical Engineering, combining technology with a passion for health.
+
+From the beginning, my work always revolved around **data analysis** — first in hardware (processor data), then in business intelligence, and finally in **clinical trials**. This constant evolution helped me develop both **technical programming skills** and a strong sense of how **data can tell the story of a product's development**.
+
+What truly inspires me is seeing how clinical trial data reflects the **real-world impact** a treatment can have — from initial data cleaning and reporting, to seeing that product eventually reach the market and help thousands of people.
+
+> _Every dataset is a story of lives transformed — and I’m proud to help write those stories._
