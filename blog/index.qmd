@@ -1,0 +1,7 @@
+---
+title: Blog
+---
+
+# Blog
+
+Welcome to my clinical programming blog.

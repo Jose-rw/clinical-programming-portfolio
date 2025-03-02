@@ -7,11 +7,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - projects/index.qmd
-      - blog/index.qmd
-      - certifications.qmd
-      - agile.qmd
+      - href: about.qmd
+        text: About Me
+      - text: Projects
+        href: projects/
+      - text: Blog
+        href: blog/
+      - href: certifications.qmd
+        text: Certifications
+      - href: agile.qmd
+        text: Agile Methodologies
       - text: "Resources"
         href: resources/
 

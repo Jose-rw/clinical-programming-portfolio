@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Clinical Programming Portfolio",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "Welcome to my Clinical Programming Portfolio!"
+    "text": "My Projects\nWork in progress. I will showcase clinical programming projects here soon."
   },
   {
     "objectID": "blog/2025-03-02-sas-to-r-migration.html",
@@ -40,5 +40,19 @@
     "title": "Agile Methodologies",
     "section": "",
     "text": "Agile in Clinical Programming\nAs the clinical programming industry evolves, the need for agility grows stronger. Traditional waterfall models are being replaced with Scrum-inspired approaches, where cross-functional teams collaborate continuously.\n\nSprint-based programming (TFL production in cycles).\nEarly validation and continuous feedback.\nCollaboration between data management, programming, and biostatistics.\n\nThis section will grow as I continue exploring and applying Agile methodologies in clinical programming."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Blog\nWelcome to my clinical programming blog."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Clinical Programming Portfolio",
+    "section": "",
+    "text": "Welcome to my Clinical Programming Portfolio!"
   }
 ]

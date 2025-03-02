@@ -1,0 +1,7 @@
+---
+title: Projects
+---
+
+# My Projects
+
+Work in progress. I will showcase clinical programming projects here soon.
