@@ -1,0 +1,61 @@
+
+---
+title: "{{title}}"
+date: "{{date}}"
+---
+
+# {{title}}
+
+## Objective
+This project compares the implementation of {{analysis_type}} using **SAS** and **R**.
+
+---
+
+# Code Comparison
+
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="code-block">
+```sas
+{{sas_code}}
+```
+</td>
+<td class="code-block">
+```r
+{{r_code}}
+```
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+# Output Comparison
+
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>SAS Output</th>
+<th>R Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="{{sas_output}}" alt="SAS Output" class="result-image"></td>
+<td><img src="{{r_output}}" alt="R Output" class="result-image"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+# Explanation
+{{explanation}}

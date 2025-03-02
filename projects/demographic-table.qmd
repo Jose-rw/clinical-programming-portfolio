@@ -1,0 +1,69 @@
+
+---
+title: "Demographic Table: SAS vs R"
+date: "2025-03-02"
+---
+
+# Demographic Table: SAS vs R
+
+## Objective
+This project demonstrates how to generate a **demographic table** in clinical trials using **SAS (PROC REPORT)** and **R (gt package)**.
+
+---
+
+# Code Comparison
+
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="code-block">
+```sas
+PROC REPORT DATA=adsl NOWD;
+    COLUMN age sex race;
+RUN;
+```
+</td>
+<td class="code-block">
+```r
+library(gt)
+
+adsl |> 
+  gt() |> 
+  tab_header(title = "Demographic Table")
+```
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+# Output Comparison
+
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>SAS Output</th>
+<th>R Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="sas_demo_output.png" alt="SAS Output" class="result-image"></td>
+<td><img src="r_demo_output.png" alt="R Output" class="result-image"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+# Explanation
+Both SAS and R provide **structured reporting** for clinical trial demographics. 
+- `PROC REPORT` is widely used in **CDISC submissions**, allowing complex formatting.
+- The `gt` package in R offers **modern styling** and easier formatting in HTML outputs.
