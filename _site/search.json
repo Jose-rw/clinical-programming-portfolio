@@ -1,10 +1,80 @@
 [
   {
+    "objectID": "projects/sas-oncology-report.html",
+    "href": "projects/sas-oncology-report.html",
+    "title": "Oncology Report in SAS",
+    "section": "",
+    "text": "This project demonstrates how to create a demographic table in SAS using PROC REPORT.\n\n\nPROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;\n\n\n\nIn clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
+  },
+  {
+    "objectID": "projects/sas-oncology-report.html#example-code",
+    "href": "projects/sas-oncology-report.html#example-code",
+    "title": "Oncology Report in SAS",
+    "section": "",
+    "text": "PROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;"
+  },
+  {
+    "objectID": "projects/sas-oncology-report.html#explanation",
+    "href": "projects/sas-oncology-report.html#explanation",
+    "title": "Oncology Report in SAS",
+    "section": "",
+    "text": "In clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
+  },
+  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "My Projects\nWork in progress. I will showcase clinical programming projects here soon."
+    "text": "Clinical Programming Projects\nWelcome to my projects section. Below are some real examples demonstrating both SAS and R techniques applied to oncology clinical trials.\n\nOncology Report in SAS\nSurvival Analysis in R"
+  },
+  {
+    "objectID": "clinical-programming-portfolio-full/projects/sas-oncology-report.html",
+    "href": "clinical-programming-portfolio-full/projects/sas-oncology-report.html",
+    "title": "Oncology Report in SAS",
+    "section": "",
+    "text": "This project demonstrates how to create a demographic table in SAS using PROC REPORT.\n\n\nPROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;\n\n\n\nIn clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
+  },
+  {
+    "objectID": "clinical-programming-portfolio-full/projects/sas-oncology-report.html#example-code",
+    "href": "clinical-programming-portfolio-full/projects/sas-oncology-report.html#example-code",
+    "title": "Oncology Report in SAS",
+    "section": "",
+    "text": "PROC REPORT DATA=adsl NOWD;\n    COLUMN age sex race;\nRUN;"
+  },
+  {
+    "objectID": "clinical-programming-portfolio-full/projects/sas-oncology-report.html#explanation",
+    "href": "clinical-programming-portfolio-full/projects/sas-oncology-report.html#explanation",
+    "title": "Oncology Report in SAS",
+    "section": "",
+    "text": "In clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
+  },
+  {
+    "objectID": "clinical-programming-portfolio-full/projects/index.html",
+    "href": "clinical-programming-portfolio-full/projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Clinical Programming Projects\nWelcome to my projects section. Below are some real examples demonstrating both SAS and R techniques applied to oncology clinical trials.\n\nOncology Report in SAS\nSurvival Analysis in R"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Blog\nWelcome to my clinical programming blog."
+  },
+  {
+    "objectID": "agile.html",
+    "href": "agile.html",
+    "title": "Agile Methodologies",
+    "section": "",
+    "text": "Agile in Clinical Programming\nAs the clinical programming industry evolves, the need for agility grows stronger. Traditional waterfall models are being replaced with Scrum-inspired approaches, where cross-functional teams collaborate continuously.\n\nSprint-based programming (TFL production in cycles).\nEarly validation and continuous feedback.\nCollaboration between data management, programming, and biostatistics.\n\nThis section will grow as I continue exploring and applying Agile methodologies in clinical programming."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "About Me\nMy journey started in Electronic Engineering, but I soon realized I wanted to work closer to the healthcare field. That’s how I transitioned into Biomedical Engineering, combining technology with a passion for health.\nFrom the beginning, my work always revolved around data analysis — first in hardware (processor data), then in business intelligence, and finally in clinical trials. This constant evolution helped me develop both technical programming skills and a strong sense of how data can tell the story of a product’s development.\nWhat truly inspires me is seeing how clinical trial data reflects the real-world impact a treatment can have — from initial data cleaning and reporting, to seeing that product eventually reach the market and help thousands of people.\n\nEvery dataset is a story of lives transformed — and I’m proud to help write those stories."
   },
   {
     "objectID": "blog/2025-03-02-sas-to-r-migration.html",
@@ -28,25 +98,25 @@
     "text": "/* Original SAS code */\nPROC LIFETEST DATA=adtte PLOTS=survival;\n    TIME aval*cnsr(1);\n    STRATA trtp;\nRUN;\n# Equivalent in R (survfit + ggplot2)\nlibrary(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\n\n# Plot Kaplan-Meier Curve\nggsurvplot(km_fit)\nThese are just a couple of examples showing how the thinking process can stay the same, even if the syntax changes."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "clinical-programming-portfolio-full/projects/r-survival-analysis.html",
+    "href": "clinical-programming-portfolio-full/projects/r-survival-analysis.html",
+    "title": "Survival Analysis in R",
     "section": "",
-    "text": "About Me\nMy journey started in Electronic Engineering, but I soon realized I wanted to work closer to the healthcare field. That’s how I transitioned into Biomedical Engineering, combining technology with a passion for health.\nFrom the beginning, my work always revolved around data analysis — first in hardware (processor data), then in business intelligence, and finally in clinical trials. This constant evolution helped me develop both technical programming skills and a strong sense of how data can tell the story of a product’s development.\nWhat truly inspires me is seeing how clinical trial data reflects the real-world impact a treatment can have — from initial data cleaning and reporting, to seeing that product eventually reach the market and help thousands of people.\n\nEvery dataset is a story of lives transformed — and I’m proud to help write those stories."
+    "text": "This project demonstrates Kaplan-Meier estimation using survival and ggplot2 in R.\n\n\nlibrary(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)\n\n\n\nSurvival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
   },
   {
-    "objectID": "agile.html",
-    "href": "agile.html",
-    "title": "Agile Methodologies",
+    "objectID": "clinical-programming-portfolio-full/projects/r-survival-analysis.html#example-code",
+    "href": "clinical-programming-portfolio-full/projects/r-survival-analysis.html#example-code",
+    "title": "Survival Analysis in R",
     "section": "",
-    "text": "Agile in Clinical Programming\nAs the clinical programming industry evolves, the need for agility grows stronger. Traditional waterfall models are being replaced with Scrum-inspired approaches, where cross-functional teams collaborate continuously.\n\nSprint-based programming (TFL production in cycles).\nEarly validation and continuous feedback.\nCollaboration between data management, programming, and biostatistics.\n\nThis section will grow as I continue exploring and applying Agile methodologies in clinical programming."
+    "text": "library(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "clinical-programming-portfolio-full/projects/r-survival-analysis.html#explanation",
+    "href": "clinical-programming-portfolio-full/projects/r-survival-analysis.html#explanation",
+    "title": "Survival Analysis in R",
     "section": "",
-    "text": "Blog\nWelcome to my clinical programming blog."
+    "text": "Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
   },
   {
     "objectID": "index.html",
@@ -54,5 +124,26 @@
     "title": "Clinical Programming Portfolio",
     "section": "",
     "text": "Welcome to my Clinical Programming Portfolio!"
+  },
+  {
+    "objectID": "projects/r-survival-analysis.html",
+    "href": "projects/r-survival-analysis.html",
+    "title": "Survival Analysis in R",
+    "section": "",
+    "text": "This project demonstrates Kaplan-Meier estimation using survival and ggplot2 in R.\n\n\nlibrary(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)\n\n\n\nSurvival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
+  },
+  {
+    "objectID": "projects/r-survival-analysis.html#example-code",
+    "href": "projects/r-survival-analysis.html#example-code",
+    "title": "Survival Analysis in R",
+    "section": "",
+    "text": "library(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\nggsurvplot(km_fit)"
+  },
+  {
+    "objectID": "projects/r-survival-analysis.html#explanation",
+    "href": "projects/r-survival-analysis.html#explanation",
+    "title": "Survival Analysis in R",
+    "section": "",
+    "text": "Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS)."
   }
 ]

@@ -1,0 +1,21 @@
+
+---
+title: Oncology Report in SAS
+date: 2025-03-02
+---
+
+# Oncology Report (SAS)
+
+This project demonstrates how to create a demographic table in SAS using `PROC REPORT`.
+
+## Example Code
+
+```sas
+PROC REPORT DATA=adsl NOWD;
+    COLUMN age sex race;
+RUN;
+```
+
+## Explanation
+
+In clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR).

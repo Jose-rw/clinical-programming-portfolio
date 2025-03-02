@@ -1,0 +1,23 @@
+
+---
+title: Survival Analysis in R
+date: 2025-03-02
+---
+
+# Survival Analysis (R)
+
+This project demonstrates Kaplan-Meier estimation using `survival` and `ggplot2` in R.
+
+## Example Code
+
+```r
+library(survival)
+library(ggplot2)
+
+km_fit <- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)
+ggsurvplot(km_fit)
+```
+
+## Explanation
+
+Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS).
