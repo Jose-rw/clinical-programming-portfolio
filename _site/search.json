@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Clinical Programming Portfolio",
+    "section": "",
+    "text": "Welcome to my Clinical Programming Portfolio!"
+  },
+  {
+    "objectID": "blog/2025-03-02-sas-to-r-migration.html",
+    "href": "blog/2025-03-02-sas-to-r-migration.html",
+    "title": "Migrating from SAS to R in Clinical Programming",
+    "section": "",
+    "text": "/* Original SAS code */\nPROC REPORT DATA=adsl;\n    COLUMN age sex race;\nRUN;\n# Equivalent in R (gt table)\nlibrary(gt)\nadsl |&gt; gt()\n\n\n\n/* Original SAS code */\nPROC LIFETEST DATA=adtte PLOTS=survival;\n    TIME aval*cnsr(1);\n    STRATA trtp;\nRUN;\n# Equivalent in R (survfit + ggplot2)\nlibrary(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\n\n# Plot Kaplan-Meier Curve\nggsurvplot(km_fit)\nThese are just a couple of examples showing how the thinking process can stay the same, even if the syntax changes."
+  },
+  {
+    "objectID": "blog/2025-03-02-sas-to-r-migration.html#example-1-proc-report-to-gt-table",
+    "href": "blog/2025-03-02-sas-to-r-migration.html#example-1-proc-report-to-gt-table",
+    "title": "Migrating from SAS to R in Clinical Programming",
+    "section": "",
+    "text": "/* Original SAS code */\nPROC REPORT DATA=adsl;\n    COLUMN age sex race;\nRUN;\n# Equivalent in R (gt table)\nlibrary(gt)\nadsl |&gt; gt()"
+  },
+  {
+    "objectID": "blog/2025-03-02-sas-to-r-migration.html#example-2-proc-lifetest-to-survfit-kaplan-meier",
+    "href": "blog/2025-03-02-sas-to-r-migration.html#example-2-proc-lifetest-to-survfit-kaplan-meier",
+    "title": "Migrating from SAS to R in Clinical Programming",
+    "section": "",
+    "text": "/* Original SAS code */\nPROC LIFETEST DATA=adtte PLOTS=survival;\n    TIME aval*cnsr(1);\n    STRATA trtp;\nRUN;\n# Equivalent in R (survfit + ggplot2)\nlibrary(survival)\nlibrary(ggplot2)\n\nkm_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)\n\n# Plot Kaplan-Meier Curve\nggsurvplot(km_fit)\nThese are just a couple of examples showing how the thinking process can stay the same, even if the syntax changes."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "About Me\nMy journey started in Electronic Engineering, but I soon realized I wanted to work closer to the healthcare field. That’s how I transitioned into Biomedical Engineering, combining technology with a passion for health.\nFrom the beginning, my work always revolved around data analysis — first in hardware (processor data), then in business intelligence, and finally in clinical trials. This constant evolution helped me develop both technical programming skills and a strong sense of how data can tell the story of a product’s development.\nWhat truly inspires me is seeing how clinical trial data reflects the real-world impact a treatment can have — from initial data cleaning and reporting, to seeing that product eventually reach the market and help thousands of people.\n\nEvery dataset is a story of lives transformed — and I’m proud to help write those stories."
+  },
+  {
+    "objectID": "agile.html",
+    "href": "agile.html",
+    "title": "Agile Methodologies",
+    "section": "",
+    "text": "Agile in Clinical Programming\nAs the clinical programming industry evolves, the need for agility grows stronger. Traditional waterfall models are being replaced with Scrum-inspired approaches, where cross-functional teams collaborate continuously.\n\nSprint-based programming (TFL production in cycles).\nEarly validation and continuous feedback.\nCollaboration between data management, programming, and biostatistics.\n\nThis section will grow as I continue exploring and applying Agile methodologies in clinical programming."
+  }
+]

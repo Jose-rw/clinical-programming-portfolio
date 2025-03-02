@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Clinical Programming Portfolio"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - projects/index.qmd
+      - blog/index.qmd
+      - certifications.qmd
+      - agile.qmd
+      - text: "Resources"
+        href: resources/
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
