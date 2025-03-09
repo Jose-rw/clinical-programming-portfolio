@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-02">
 
-<title>Survival Analysis in R – Clinical Programming Portfolio</title>
+<title>Clinical Trial Analysis Flow (CDISC) – Clinical Programming Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -183,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Survival Analysis in R</h1>
+<h1 class="title">Clinical Trial Analysis Flow (CDISC)</h1>
 </div>
 
 
@@ -191,12 +156,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 2, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -206,20 +165,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="survival-analysis-r" class="level1">
-<h1>Survival Analysis (R)</h1>
-<p>This project demonstrates Kaplan-Meier estimation using <code>survival</code> and <code>ggplot2</code> in R.</p>
-<section id="example-code" class="level2">
-<h2 class="anchored" data-anchor-id="example-code">Example Code</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>km_fit <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(AVAL, CNSR) <span class="sc">~</span> TRTP, <span class="at">data =</span> adtte)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsurvplot</span>(km_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="clinical-trial-analysis-flow-cdisc" class="level1">
+<h1>Clinical Trial Analysis Flow (CDISC)</h1>
+<p>This section documents the full process of a regulatory-compliant clinical trial analysis, following CDISC standards.</p>
+<section id="step-1-raw-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-raw-data">Step 1: Raw Data</h2>
+<p>This includes: - Demographics (age, sex, treatment group) - Clinical Events (relapse, recurrence, etc.) - Disposition (dropout, completion) - Time-to-event (TTE) data</p>
 </section>
-<section id="explanation" class="level2">
-<h2 class="anchored" data-anchor-id="explanation">Explanation</h2>
-<p>Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS).</p>
+<section id="step-2-create-sdtm" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-create-sdtm">Step 2: Create SDTM</h2>
+<p>SDTM datasets produced: - <code>DM</code> - Demographics - <code>CE</code> - Clinical Events - <code>DS</code> - Disposition</p>
+</section>
+<section id="step-3-create-adam" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-create-adam">Step 3: Create ADaM</h2>
+<p>ADaM datasets produced: - <code>ADTTE</code> - Time to Event dataset (ready for survival analysis)</p>
+</section>
+<section id="step-4-tfl-generation" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-tfl-generation">Step 4: TFL Generation</h2>
+<p>TFLs produced: - <strong>Table:</strong> Population summary table (age, sex, etc.) - <strong>Listing:</strong> List of key events per patient - <strong>Figure:</strong> Kaplan-Meier survival plot</p>
+</section>
+<section id="step-5-final-report" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-final-report">Step 5: Final Report</h2>
+<p>All the above will be combined into this page and made available in the portfolio.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="clinical_flowchart.png" class="img-fluid figure-img"></p>
+<figcaption>Clinical Flowchart</figcaption>
+</figure>
+</div>
+<hr>
 
 
 </section>

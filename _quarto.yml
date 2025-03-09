@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: "."
 
 website:
   title: "Clinical Programming Portfolio"
@@ -10,9 +11,17 @@ website:
       - href: about.qmd
         text: About Me
       - text: Projects
-        href: projects/
-      - text: Blog
-        href: blog/
+        menu:
+          - text: "Survival Analysis"
+            href: projects/survival_analysis/survival_analysis_parallel.qmd
+          - text: "SAS Oncology Report"
+            href: projects/sas-oncology-report.qmd
+          - text: "R Survival Analysis"
+            href: projects/r-survival-analysis.qmd
+          - text: "Demographic Table"
+            href: projects/demographic-table.qmd
+      - href: blog/
+        text: Blog
       - href: certifications.qmd
         text: Certifications
       - href: agile.qmd

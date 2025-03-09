@@ -1,0 +1,48 @@
+
+---
+title: "Bioinformatics Analysis Flow (Gene Expression & Survival)"
+---
+
+# Bioinformatics Analysis Flow (Gene Expression & Survival)
+
+This section documents a full bioinformatics analysis pipeline combining gene expression data and clinical survival data.
+
+## Step 1: Raw Data
+
+This includes:
+- Gene expression data (`GSE7390_expression.csv`)
+- Clinical metadata (`GSE7390_metadata.csv`)
+
+## Step 2: Preprocessing
+
+- Quality Control (removal of low-expression genes)
+- Normalization (log2 transformation or z-score)
+
+## Step 3: Exploratory Analysis
+
+- Principal Component Analysis (PCA)
+- Clustering (heatmap or unsupervised clustering)
+
+## Step 4: Differential Expression Analysis
+
+- Compare gene expression between survivors and non-survivors
+- Identify significantly differentially expressed genes (DEGs)
+
+## Step 5: Combined Modeling
+
+- Multivariate Cox model incorporating both clinical covariates and DEGs
+
+## Step 6: TFL Generation
+
+TFLs produced:
+- **Table:** Top 10 survival-associated genes
+- **Listing:** Patient list with molecular and clinical features
+- **Figure:** Heatmap of expression by clinical group
+
+## Step 7: Final Report
+
+All the above will be combined into this page and made available in the portfolio.
+
+![Bioinformatics Flowchart](bioinformatics_flowchart.png)
+
+---

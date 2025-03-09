@@ -1,0 +1,83 @@
+
+---
+title: "Survival Analysis - SAS vs R"
+date: "2025-03-03"
+---
+
+# Survival Analysis - SAS vs R
+
+## Objective
+This project compares the Kaplan-Meier survival analysis using **SAS** and **R**.
+
+---
+
+# Code Comparison
+
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="code-block">
+PROC LIFETEST DATA=adtte PLOTS=survival;
+    TIME AVAL*CNSR(1);
+    STRATA TRTP;
+RUN;
+</td>
+<td class="code-block">
+library(survival)
+library(survminer)
+
+km_fit <- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte)
+ggsurvplot(km_fit)
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+# Output Comparison
+
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>SAS Output</th>
+<th>R Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="sas_survival_plot.png" alt="SAS Output" class="result-image"></td>
+<td><img src="r_survival_plot.png" alt="R Output" class="result-image"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+# Instructions to Update the Images
+
+### SAS
+- Run the SAS code in your local environment.
+- Save the plot as `sas_survival_plot.png` inside the `projects/` folder.
+
+### R
+- Run the R code in your local environment.
+- Save the plot as `r_survival_plot.png` inside the `projects/` folder.
+
+### Final Step
+- After saving both images, run:
+```bash
+quarto render
+git add projects/sas_survival_plot.png projects/r_survival_plot.png projects/survival-analysis-sas-vs-r.qmd
+git commit -m "Added survival analysis project"
+git push origin main
+```
+
+This ensures the images and content appear correctly in your website.
+

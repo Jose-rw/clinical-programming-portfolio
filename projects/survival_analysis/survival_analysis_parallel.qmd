@@ -1,0 +1,94 @@
+
+---
+title: "Survival Analysis - SAS vs R"
+---
+
+# Survival Analysis in SAS & R
+
+This section demonstrates a parallel analysis comparing the creation of a Kaplan-Meier survival curve using both **SAS** and **R**.
+We are using the dataset derived from **GSE7390**, simulating an ADTTE structure (Time to Event Analysis dataset).
+
+---
+
+## Dataset
+
+The dataset used for this analysis is:
+- **GSE7390_metadata.csv** (with columns: SampleID, Treatment, Age, TimeToEvent, Event)
+
+---
+
+## Step 1: Import Data
+
+### SAS Code
+
+```sas
+* Import the CSV into a SAS dataset;
+proc import datafile="GSE7390_metadata.csv"
+    out=work.adtte
+    dbms=csv
+    replace;
+    getnames=yes;
+run;
+```
+
+### R Code
+
+```r
+# Load data into R
+adtte <- read.csv("GSE7390_metadata.csv")
+```
+
+---
+
+## Step 2: Survival Analysis
+
+### SAS Code
+
+```sas
+proc lifetest data=adtte plots=survival;
+    time TimeToEvent*Event(0);
+    strata Treatment;
+run;
+```
+
+### R Code
+
+```r
+library(survival)
+library(survminer)
+
+fit <- survfit(Surv(TimeToEvent, Event) ~ Treatment, data = adtte)
+
+ggsurvplot(fit, data = adtte, pval = TRUE, risk.table = TRUE, ggtheme = theme_minimal())
+ggsave("survival_analysis_output_R.png", dpi = 300)
+```
+
+---
+
+## Step 3: Results Comparison
+
+### Kaplan-Meier Plot in SAS (Example Placeholder)
+*(This image should be manually generated in SAS and saved to the `projects/survival_analysis/` folder as `survival_analysis_output_SAS.png`)*
+
+![](survival_analysis_output_SAS.png)
+
+### Kaplan-Meier Plot in R
+
+![](survival_analysis_output_R.png)
+
+---
+
+## Summary Table (optional)
+
+| Treatment | n | Events | Median Survival |
+|---|---|---|---|
+| Chemo | XX | XX | XX months |
+| Placebo | XX | XX | XX months |
+
+---
+
+## Final Notes
+
+This example highlights how to perform the same analysis in both environments, providing flexibility to transition from SAS to R while ensuring traceability.
+
+---

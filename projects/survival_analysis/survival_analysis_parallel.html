@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-02">
 
-<title>Survival Analysis in R – Clinical Programming Portfolio</title>
+<title>Survival Analysis - SAS vs R – Clinical Programming Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,22 +57,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,7 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -113,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Clinical Programming Portfolio</span>
     </a>
   </div>
@@ -124,11 +123,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -137,33 +136,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="../projects/survival_analysis/survival_analysis_parallel.html">
+    <a class="dropdown-item" href="../../projects/survival_analysis/survival_analysis_parallel.html">
  <span class="dropdown-text">Survival Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../projects/sas-oncology-report.html">
+    <a class="dropdown-item" href="../../projects/sas-oncology-report.html">
  <span class="dropdown-text">SAS Oncology Report</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../projects/r-survival-analysis.html">
+    <a class="dropdown-item" href="../../projects/r-survival-analysis.html">
  <span class="dropdown-text">R Survival Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../projects/demographic-table.html">
+    <a class="dropdown-item" href="../../projects/demographic-table.html">
  <span class="dropdown-text">Demographic Table</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../blog/"> 
+    <a class="nav-link" href="../../blog/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../agile.html"> 
+    <a class="nav-link" href="../../agile.html"> 
 <span class="menu-text">Agile Methodologies</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources/"> 
+    <a class="nav-link" href="../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -183,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Survival Analysis in R</h1>
+<h1 class="title">Survival Analysis - SAS vs R</h1>
 </div>
 
 
@@ -191,12 +190,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 2, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -206,20 +199,100 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="survival-analysis-r" class="level1">
-<h1>Survival Analysis (R)</h1>
-<p>This project demonstrates Kaplan-Meier estimation using <code>survival</code> and <code>ggplot2</code> in R.</p>
-<section id="example-code" class="level2">
-<h2 class="anchored" data-anchor-id="example-code">Example Code</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>km_fit <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(AVAL, CNSR) <span class="sc">~</span> TRTP, <span class="at">data =</span> adtte)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsurvplot</span>(km_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="survival-analysis-in-sas-r" class="level1">
+<h1>Survival Analysis in SAS &amp; R</h1>
+<p>This section demonstrates a parallel analysis comparing the creation of a Kaplan-Meier survival curve using both <strong>SAS</strong> and <strong>R</strong>. We are using the dataset derived from <strong>GSE7390</strong>, simulating an ADTTE structure (Time to Event Analysis dataset).</p>
+<hr>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The dataset used for this analysis is: - <strong>GSE7390_metadata.csv</strong> (with columns: SampleID, Treatment, Age, TimeToEvent, Event)</p>
+<hr>
 </section>
-<section id="explanation" class="level2">
-<h2 class="anchored" data-anchor-id="explanation">Explanation</h2>
-<p>Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS).</p>
+<section id="step-1-import-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-import-data">Step 1: Import Data</h2>
+<section id="sas-code" class="level3">
+<h3 class="anchored" data-anchor-id="sas-code">SAS Code</h3>
+<pre class="sas"><code>* Import the CSV into a SAS dataset;
+proc import datafile="GSE7390_metadata.csv"
+    out=work.adtte
+    dbms=csv
+    replace;
+    getnames=yes;
+run;</code></pre>
+</section>
+<section id="r-code" class="level3">
+<h3 class="anchored" data-anchor-id="r-code">R Code</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data into R</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>adtte <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"GSE7390_metadata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="step-2-survival-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-survival-analysis">Step 2: Survival Analysis</h2>
+<section id="sas-code-1" class="level3">
+<h3 class="anchored" data-anchor-id="sas-code-1">SAS Code</h3>
+<pre class="sas"><code>proc lifetest data=adtte plots=survival;
+    time TimeToEvent*Event(0);
+    strata Treatment;
+run;</code></pre>
+</section>
+<section id="r-code-1" class="level3">
+<h3 class="anchored" data-anchor-id="r-code-1">R Code</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survminer)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(TimeToEvent, Event) <span class="sc">~</span> Treatment, <span class="at">data =</span> adtte)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsurvplot</span>(fit, <span class="at">data =</span> adtte, <span class="at">pval =</span> <span class="cn">TRUE</span>, <span class="at">risk.table =</span> <span class="cn">TRUE</span>, <span class="at">ggtheme =</span> <span class="fu">theme_minimal</span>())</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"survival_analysis_output_R.png"</span>, <span class="at">dpi =</span> <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="step-3-results-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-results-comparison">Step 3: Results Comparison</h2>
+<section id="kaplan-meier-plot-in-sas-example-placeholder" class="level3">
+<h3 class="anchored" data-anchor-id="kaplan-meier-plot-in-sas-example-placeholder">Kaplan-Meier Plot in SAS (Example Placeholder)</h3>
+<p><em>(This image should be manually generated in SAS and saved to the <code>projects/survival_analysis/</code> folder as <code>survival_analysis_output_SAS.png</code>)</em></p>
+<p><img src="survival_analysis_output_SAS.png" class="img-fluid"></p>
+</section>
+<section id="kaplan-meier-plot-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="kaplan-meier-plot-in-r">Kaplan-Meier Plot in R</h3>
+<p><img src="survival_analysis_output_R.png" class="img-fluid"></p>
+<hr>
+</section>
+</section>
+<section id="summary-table-optional" class="level2">
+<h2 class="anchored" data-anchor-id="summary-table-optional">Summary Table (optional)</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Treatment</th>
+<th>n</th>
+<th>Events</th>
+<th>Median Survival</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chemo</td>
+<td>XX</td>
+<td>XX</td>
+<td>XX months</td>
+</tr>
+<tr class="even">
+<td>Placebo</td>
+<td>XX</td>
+<td>XX</td>
+<td>XX months</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="final-notes" class="level2">
+<h2 class="anchored" data-anchor-id="final-notes">Final Notes</h2>
+<p>This example highlights how to perform the same analysis in both environments, providing flexibility to transition from SAS to R while ensuring traceability.</p>
+<hr>
 
 
 </section>

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-02">
+<meta name="dcterms.date" content="2025-03-03">
 
-<title>Survival Analysis in R – Clinical Programming Portfolio</title>
+<title>Survival Analysis - SAS vs R – Clinical Programming Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -183,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Survival Analysis in R</h1>
+<h1 class="title">Survival Analysis - SAS vs R</h1>
 </div>
 
 
@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 2, 2025</p>
+      <p class="date">March 3, 2025</p>
     </div>
   </div>
   
@@ -206,20 +206,93 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="survival-analysis-r" class="level1">
-<h1>Survival Analysis (R)</h1>
-<p>This project demonstrates Kaplan-Meier estimation using <code>survival</code> and <code>ggplot2</code> in R.</p>
-<section id="example-code" class="level2">
-<h2 class="anchored" data-anchor-id="example-code">Example Code</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>km_fit <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(AVAL, CNSR) <span class="sc">~</span> TRTP, <span class="at">data =</span> adtte)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsurvplot</span>(km_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="survival-analysis---sas-vs-r" class="level1">
+<h1>Survival Analysis - SAS vs R</h1>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
+<p>This project compares the Kaplan-Meier survival analysis using <strong>SAS</strong> and <strong>R</strong>.</p>
+<hr>
 </section>
-<section id="explanation" class="level2">
-<h2 class="anchored" data-anchor-id="explanation">Explanation</h2>
-<p>Survival analysis is a key analysis in oncology trials, especially for endpoint analysis like Progression-Free Survival (PFS) and Overall Survival (OS).</p>
+</section>
+<section id="code-comparison" class="level1">
+<h1>Code Comparison</h1>
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>
+SAS Code
+</th>
+<th>
+R Code
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="code-block">
+PROC LIFETEST DATA=adtte PLOTS=survival; TIME AVAL*CNSR(1); STRATA TRTP; RUN;
+</td>
+<td class="code-block">
+<p>library(survival) library(survminer)</p>
+km_fit &lt;- survfit(Surv(AVAL, CNSR) ~ TRTP, data = adtte) ggsurvplot(km_fit)
+</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="output-comparison" class="level1">
+<h1>Output Comparison</h1>
+<table class="project-comparison-table">
+<thead>
+<tr>
+<th>
+SAS Output
+</th>
+<th>
+R Output
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<img src="sas_survival_plot.png" alt="SAS Output" class="result-image">
+</td>
+<td>
+<img src="r_survival_plot.png" alt="R Output" class="result-image">
+</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="instructions-to-update-the-images" class="level1">
+<h1>Instructions to Update the Images</h1>
+<section id="sas" class="level3">
+<h3 class="anchored" data-anchor-id="sas">SAS</h3>
+<ul>
+<li>Run the SAS code in your local environment.</li>
+<li>Save the plot as <code>sas_survival_plot.png</code> inside the <code>projects/</code> folder.</li>
+</ul>
+</section>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
+<ul>
+<li>Run the R code in your local environment.</li>
+<li>Save the plot as <code>r_survival_plot.png</code> inside the <code>projects/</code> folder.</li>
+</ul>
+</section>
+<section id="final-step" class="level3">
+<h3 class="anchored" data-anchor-id="final-step">Final Step</h3>
+<ul>
+<li>After saving both images, run:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add projects/sas_survival_plot.png projects/r_survival_plot.png projects/survival-analysis-sas-vs-r.qmd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Added survival analysis project"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This ensures the images and content appear correctly in your website.</p>
 
 
 </section>

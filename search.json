@@ -14,6 +14,20 @@
     "text": "This project compares the implementation of {{analysis_type}} using SAS and R."
   },
   {
+    "objectID": "projects/survival-analysis-sas-vs-r.html",
+    "href": "projects/survival-analysis-sas-vs-r.html",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "This project compares the Kaplan-Meier survival analysis using SAS and R."
+  },
+  {
+    "objectID": "projects/survival-analysis-sas-vs-r.html#objective",
+    "href": "projects/survival-analysis-sas-vs-r.html#objective",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "This project compares the Kaplan-Meier survival analysis using SAS and R."
+  },
+  {
     "objectID": "projects/r-survival-analysis.html",
     "href": "projects/r-survival-analysis.html",
     "title": "Survival Analysis in R",
@@ -47,6 +61,62 @@
     "title": "Demographic Table: SAS vs R",
     "section": "",
     "text": "This project demonstrates how to generate a demographic table in clinical trials using SAS (PROC REPORT) and R (gt package)."
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html",
+    "href": "projects/bioinformatics_flow.html",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "This section documents a full bioinformatics analysis pipeline combining gene expression data and clinical survival data.\n\n\nThis includes: - Gene expression data (GSE7390_expression.csv) - Clinical metadata (GSE7390_metadata.csv)\n\n\n\n\nQuality Control (removal of low-expression genes)\nNormalization (log2 transformation or z-score)\n\n\n\n\n\nPrincipal Component Analysis (PCA)\nClustering (heatmap or unsupervised clustering)\n\n\n\n\n\nCompare gene expression between survivors and non-survivors\nIdentify significantly differentially expressed genes (DEGs)\n\n\n\n\n\nMultivariate Cox model incorporating both clinical covariates and DEGs\n\n\n\n\nTFLs produced: - Table: Top 10 survival-associated genes - Listing: Patient list with molecular and clinical features - Figure: Heatmap of expression by clinical group\n\n\n\nAll the above will be combined into this page and made available in the portfolio.\n\n\n\nBioinformatics Flowchart"
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html#step-1-raw-data",
+    "href": "projects/bioinformatics_flow.html#step-1-raw-data",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "This includes: - Gene expression data (GSE7390_expression.csv) - Clinical metadata (GSE7390_metadata.csv)"
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html#step-2-preprocessing",
+    "href": "projects/bioinformatics_flow.html#step-2-preprocessing",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "Quality Control (removal of low-expression genes)\nNormalization (log2 transformation or z-score)"
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html#step-3-exploratory-analysis",
+    "href": "projects/bioinformatics_flow.html#step-3-exploratory-analysis",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "Principal Component Analysis (PCA)\nClustering (heatmap or unsupervised clustering)"
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html#step-4-differential-expression-analysis",
+    "href": "projects/bioinformatics_flow.html#step-4-differential-expression-analysis",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "Compare gene expression between survivors and non-survivors\nIdentify significantly differentially expressed genes (DEGs)"
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html#step-5-combined-modeling",
+    "href": "projects/bioinformatics_flow.html#step-5-combined-modeling",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "Multivariate Cox model incorporating both clinical covariates and DEGs"
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html#step-6-tfl-generation",
+    "href": "projects/bioinformatics_flow.html#step-6-tfl-generation",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "TFLs produced: - Table: Top 10 survival-associated genes - Listing: Patient list with molecular and clinical features - Figure: Heatmap of expression by clinical group"
+  },
+  {
+    "objectID": "projects/bioinformatics_flow.html#step-7-final-report",
+    "href": "projects/bioinformatics_flow.html#step-7-final-report",
+    "title": "Bioinformatics Analysis Flow (Gene Expression & Survival)",
+    "section": "",
+    "text": "All the above will be combined into this page and made available in the portfolio.\n\n\n\nBioinformatics Flowchart"
   },
   {
     "objectID": "clinical-programming-portfolio-full/projects/sas-oncology-report.html",
@@ -147,6 +217,48 @@
     "text": "Welcome to my Clinical Programming Portfolio!"
   },
   {
+    "objectID": "projects/clinical_flow.html",
+    "href": "projects/clinical_flow.html",
+    "title": "Clinical Trial Analysis Flow (CDISC)",
+    "section": "",
+    "text": "This section documents the full process of a regulatory-compliant clinical trial analysis, following CDISC standards.\n\n\nThis includes: - Demographics (age, sex, treatment group) - Clinical Events (relapse, recurrence, etc.) - Disposition (dropout, completion) - Time-to-event (TTE) data\n\n\n\nSDTM datasets produced: - DM - Demographics - CE - Clinical Events - DS - Disposition\n\n\n\nADaM datasets produced: - ADTTE - Time to Event dataset (ready for survival analysis)\n\n\n\nTFLs produced: - Table: Population summary table (age, sex, etc.) - Listing: List of key events per patient - Figure: Kaplan-Meier survival plot\n\n\n\nAll the above will be combined into this page and made available in the portfolio.\n\n\n\nClinical Flowchart"
+  },
+  {
+    "objectID": "projects/clinical_flow.html#step-1-raw-data",
+    "href": "projects/clinical_flow.html#step-1-raw-data",
+    "title": "Clinical Trial Analysis Flow (CDISC)",
+    "section": "",
+    "text": "This includes: - Demographics (age, sex, treatment group) - Clinical Events (relapse, recurrence, etc.) - Disposition (dropout, completion) - Time-to-event (TTE) data"
+  },
+  {
+    "objectID": "projects/clinical_flow.html#step-2-create-sdtm",
+    "href": "projects/clinical_flow.html#step-2-create-sdtm",
+    "title": "Clinical Trial Analysis Flow (CDISC)",
+    "section": "",
+    "text": "SDTM datasets produced: - DM - Demographics - CE - Clinical Events - DS - Disposition"
+  },
+  {
+    "objectID": "projects/clinical_flow.html#step-3-create-adam",
+    "href": "projects/clinical_flow.html#step-3-create-adam",
+    "title": "Clinical Trial Analysis Flow (CDISC)",
+    "section": "",
+    "text": "ADaM datasets produced: - ADTTE - Time to Event dataset (ready for survival analysis)"
+  },
+  {
+    "objectID": "projects/clinical_flow.html#step-4-tfl-generation",
+    "href": "projects/clinical_flow.html#step-4-tfl-generation",
+    "title": "Clinical Trial Analysis Flow (CDISC)",
+    "section": "",
+    "text": "TFLs produced: - Table: Population summary table (age, sex, etc.) - Listing: List of key events per patient - Figure: Kaplan-Meier survival plot"
+  },
+  {
+    "objectID": "projects/clinical_flow.html#step-5-final-report",
+    "href": "projects/clinical_flow.html#step-5-final-report",
+    "title": "Clinical Trial Analysis Flow (CDISC)",
+    "section": "",
+    "text": "All the above will be combined into this page and made available in the portfolio.\n\n\n\nClinical Flowchart"
+  },
+  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
@@ -173,5 +285,54 @@
     "title": "Oncology Report in SAS",
     "section": "",
     "text": "In clinical trials, demographic tables are a common deliverable. This example highlights a basic report that could be part of a larger Clinical Study Report (CSR)."
+  },
+  {
+    "objectID": "projects/survival_analysis/survival_analysis_parallel.html",
+    "href": "projects/survival_analysis/survival_analysis_parallel.html",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "This section demonstrates a parallel analysis comparing the creation of a Kaplan-Meier survival curve using both SAS and R. We are using the dataset derived from GSE7390, simulating an ADTTE structure (Time to Event Analysis dataset).\n\n\n\nThe dataset used for this analysis is: - GSE7390_metadata.csv (with columns: SampleID, Treatment, Age, TimeToEvent, Event)\n\n\n\n\n\n\n* Import the CSV into a SAS dataset;\nproc import datafile=\"GSE7390_metadata.csv\"\n    out=work.adtte\n    dbms=csv\n    replace;\n    getnames=yes;\nrun;\n\n\n\n# Load data into R\nadtte &lt;- read.csv(\"GSE7390_metadata.csv\")\n\n\n\n\n\n\n\nproc lifetest data=adtte plots=survival;\n    time TimeToEvent*Event(0);\n    strata Treatment;\nrun;\n\n\n\nlibrary(survival)\nlibrary(survminer)\n\nfit &lt;- survfit(Surv(TimeToEvent, Event) ~ Treatment, data = adtte)\n\nggsurvplot(fit, data = adtte, pval = TRUE, risk.table = TRUE, ggtheme = theme_minimal())\nggsave(\"survival_analysis_output_R.png\", dpi = 300)\n\n\n\n\n\n\n\n(This image should be manually generated in SAS and saved to the projects/survival_analysis/ folder as survival_analysis_output_SAS.png)\n\n\n\n\n\n\n\n\n\n\n\n\n\nTreatment\nn\nEvents\nMedian Survival\n\n\n\n\nChemo\nXX\nXX\nXX months\n\n\nPlacebo\nXX\nXX\nXX months\n\n\n\n\n\n\n\nThis example highlights how to perform the same analysis in both environments, providing flexibility to transition from SAS to R while ensuring traceability."
+  },
+  {
+    "objectID": "projects/survival_analysis/survival_analysis_parallel.html#dataset",
+    "href": "projects/survival_analysis/survival_analysis_parallel.html#dataset",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "The dataset used for this analysis is: - GSE7390_metadata.csv (with columns: SampleID, Treatment, Age, TimeToEvent, Event)"
+  },
+  {
+    "objectID": "projects/survival_analysis/survival_analysis_parallel.html#step-1-import-data",
+    "href": "projects/survival_analysis/survival_analysis_parallel.html#step-1-import-data",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "* Import the CSV into a SAS dataset;\nproc import datafile=\"GSE7390_metadata.csv\"\n    out=work.adtte\n    dbms=csv\n    replace;\n    getnames=yes;\nrun;\n\n\n\n# Load data into R\nadtte &lt;- read.csv(\"GSE7390_metadata.csv\")"
+  },
+  {
+    "objectID": "projects/survival_analysis/survival_analysis_parallel.html#step-2-survival-analysis",
+    "href": "projects/survival_analysis/survival_analysis_parallel.html#step-2-survival-analysis",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "proc lifetest data=adtte plots=survival;\n    time TimeToEvent*Event(0);\n    strata Treatment;\nrun;\n\n\n\nlibrary(survival)\nlibrary(survminer)\n\nfit &lt;- survfit(Surv(TimeToEvent, Event) ~ Treatment, data = adtte)\n\nggsurvplot(fit, data = adtte, pval = TRUE, risk.table = TRUE, ggtheme = theme_minimal())\nggsave(\"survival_analysis_output_R.png\", dpi = 300)"
+  },
+  {
+    "objectID": "projects/survival_analysis/survival_analysis_parallel.html#step-3-results-comparison",
+    "href": "projects/survival_analysis/survival_analysis_parallel.html#step-3-results-comparison",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "(This image should be manually generated in SAS and saved to the projects/survival_analysis/ folder as survival_analysis_output_SAS.png)"
+  },
+  {
+    "objectID": "projects/survival_analysis/survival_analysis_parallel.html#summary-table-optional",
+    "href": "projects/survival_analysis/survival_analysis_parallel.html#summary-table-optional",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "Treatment\nn\nEvents\nMedian Survival\n\n\n\n\nChemo\nXX\nXX\nXX months\n\n\nPlacebo\nXX\nXX\nXX months"
+  },
+  {
+    "objectID": "projects/survival_analysis/survival_analysis_parallel.html#final-notes",
+    "href": "projects/survival_analysis/survival_analysis_parallel.html#final-notes",
+    "title": "Survival Analysis - SAS vs R",
+    "section": "",
+    "text": "This example highlights how to perform the same analysis in both environments, providing flexibility to transition from SAS to R while ensuring traceability."
   }
 ]

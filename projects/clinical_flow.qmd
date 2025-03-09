@@ -1,0 +1,43 @@
+
+---
+title: "Clinical Trial Analysis Flow (CDISC)"
+---
+
+# Clinical Trial Analysis Flow (CDISC)
+
+This section documents the full process of a regulatory-compliant clinical trial analysis, following CDISC standards.
+
+## Step 1: Raw Data
+
+This includes:
+- Demographics (age, sex, treatment group)
+- Clinical Events (relapse, recurrence, etc.)
+- Disposition (dropout, completion)
+- Time-to-event (TTE) data
+
+## Step 2: Create SDTM
+
+SDTM datasets produced:
+- `DM` - Demographics
+- `CE` - Clinical Events
+- `DS` - Disposition
+
+## Step 3: Create ADaM
+
+ADaM datasets produced:
+- `ADTTE` - Time to Event dataset (ready for survival analysis)
+
+## Step 4: TFL Generation
+
+TFLs produced:
+- **Table:** Population summary table (age, sex, etc.)
+- **Listing:** List of key events per patient
+- **Figure:** Kaplan-Meier survival plot
+
+## Step 5: Final Report
+
+All the above will be combined into this page and made available in the portfolio.
+
+![Clinical Flowchart](clinical_flowchart.png)
+
+---
