@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -64,4 +63,19 @@ footer {
     height: auto;
     border: 1px solid #ddd;
     margin-top: 8px;
+}
+
+/* ✅ Corrección del dropdown menu */
+.navbar-nav .dropdown-menu {
+    background-color: #002147; /* Azul navy */
+    color: white;
+}
+
+.navbar-nav .dropdown-menu a {
+    color: white !important;
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    background-color: #004080; /* Azul más claro al pasar el mouse */
+    color: white !important;
 }
