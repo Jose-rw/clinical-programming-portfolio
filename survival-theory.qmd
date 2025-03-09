@@ -1,0 +1,15 @@
+
+---
+title: "Survival Analysis: Theory and Applications"
+format: html
+---
+
+# 📊 Survival Analysis: Theory and Applications
+
+## What is Survival Analysis?
+
+Survival analysis is a branch of statistics that deals with the **analysis of time-to-event data**. In clinical trials, the *event* usually refers to a specific outcome such as **death**, **disease recurrence**, **recovery**, or **relapse**. The goal is to analyze **the time it takes for the event to occur**, while accounting for the fact that not all participants may experience the event during the study period (censoring).
+
+...
+
+🧬 *Survival analysis is a fundamental tool to understand and compare the prognosis of patients under different treatments, essential for evidence-based medicine.*

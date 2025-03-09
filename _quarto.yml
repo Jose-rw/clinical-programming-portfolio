@@ -1,3 +1,4 @@
+
 project:
   type: website
   output-dir: "."
@@ -22,12 +23,14 @@ website:
             href: projects/demographic-table.qmd
       - href: blog/
         text: Blog
-      - href: certifications.qmd
-        text: Certifications
       - href: agile.qmd
         text: Agile Methodologies
+      - href: certifications.qmd
+        text: Certifications
       - text: "Resources"
         href: resources/
+      - text: Survival Analysis Theory
+        href: survival-theory.qmd
 
 format:
   html:
