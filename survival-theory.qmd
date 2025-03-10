@@ -1,15 +1,144 @@
-
----
-title: "Survival Analysis: Theory and Applications"
-format: html
----
-
 # 📊 Survival Analysis: Theory and Applications
 
 ## What is Survival Analysis?
 
 Survival analysis is a branch of statistics that deals with the **analysis of time-to-event data**. In clinical trials, the *event* usually refers to a specific outcome such as **death**, **disease recurrence**, **recovery**, or **relapse**. The goal is to analyze **the time it takes for the event to occur**, while accounting for the fact that not all participants may experience the event during the study period (censoring).
 
-...
+---
+
+## Why is Survival Analysis Important in Clinical Trials?
+
+In many medical studies, especially in oncology and chronic disease research, it is not sufficient to know whether a patient experienced an event, but **when** the event happened is crucial. 
+
+Survival analysis allows us to:
+
+- **Estimate the probability of surviving past a certain time point.**
+- **Compare survival rates between treatment groups.**
+- **Assess the effect of covariates (e.g., age, treatment, biomarkers) on survival.**
+- **Handle censored data**, where the outcome is not observed for all patients (e.g., lost to follow-up).
+
+---
+
+## How is Survival Analysis Performed?
+
+### 1. **From SDTM to ADaM: Preparing the Data**
+
+In clinical trials, survival analysis typically starts from SDTM datasets such as:
+
+- **AE (Adverse Events)** for event-related data.
+- **DS (Disposition)** to identify death or discontinuation dates.
+- **EX (Exposure)** for treatment start and end dates.
+
+These SDTM datasets are transformed into ADaM datasets, especially:
+
+- **ADSL (Subject-Level Analysis Dataset)**: contains baseline and demographic information.
+- **ADAE (Analysis of Adverse Events Dataset)**: provides detailed event information.
+- **ADTTE (Time-to-Event Dataset)**: specialized dataset to analyze survival or time-to-event outcomes.
+
+### 2. **Defining Time and Event Variables**
+
+- **Time-to-event**: typically derived as the number of days from randomization/treatment start (e.g., TRTSDT) to the event date or censoring date (e.g., DTHDT, LSTALVDT).
+- **Event indicator**: binary variable (1=event occurred, 0=censored).
+
+### 3. **Analysis in SAS and R**
+
+Both SAS and R allow estimation of survival functions and hazard models:
+
+#### In **SAS**:
+- `PROC LIFETEST`: Kaplan-Meier estimation, log-rank test.
+- `PROC PHREG`: Cox Proportional Hazards model.
+
+#### In **R**:
+- `survival` package: `survfit()` for Kaplan-Meier, `coxph()` for Cox model.
+
+---
+
+## What Results Are Expected and How to Interpret Them?
+
+### Variables and Outputs:
+- **Kaplan-Meier survival curves**: Estimated survival probabilities over time.
+- **Median survival time**: Time by which 50% of patients are expected to experience the event.
+- **Hazard Ratio (HR)**: Comparing risk between groups, with confidence intervals.
+- **Log-Rank test p-value**: To determine if survival curves differ significantly.
+
+### Example of Interpretation:
+- **HR < 1**: Treatment reduces the risk of event compared to control.
+- **HR > 1**: Treatment increases the risk.
+- **95% CI**: If it does not include 1, the result is statistically significant.
+- **Kaplan-Meier plot**: Visual representation of survival probability over time by group.
+
+---
+
+## Key Concepts and Definitions
+
+### 1. **Time-to-Event Data**
+- Data measuring the duration until a specified event occurs.
+- Example: Time from randomization to death.
+
+### 2. **Censoring**
+- Occurs when we do not observe the event for a patient during the study period.
+- Types:
+  - **Right censoring**: Patient leaves the study or the study ends before the event occurs.
+  - **Left censoring**: Event occurs before observation begins (less common in clinical trials).
+
+### 3. **Survival Function (S(t))**
+- Probability of surviving beyond time t.
+- Mathematically: \( S(t) = P(T > t) \)
+
+### 4. **Hazard Function (h(t))**
+- Instantaneous risk of experiencing the event at time t, given survival up to time t.
+- Mathematically: \( h(t) = \lim_{\Delta t \to 0} \frac{P(t \leq T < t+\Delta t \mid T \geq t)}{\Delta t} \)
+
+---
+
+## Common Statistical Methods
+
+### 1. **Kaplan-Meier Estimator**
+- Non-parametric method to estimate the survival function.
+- Accounts for censored data.
+
+### 2. **Log-Rank Test**
+- Statistical test to compare survival curves of two or more groups.
+
+### 3. **Cox Proportional Hazards Model**
+- Semiparametric model to estimate the effect of covariates on survival time.
+
+### 4. **Parametric Models**
+- Survival models assuming a specific distribution for survival times (e.g., exponential, Weibull).
+
+---
+
+## Example: Survival in Oncology
+
+Consider a clinical trial comparing a new chemotherapy vs. standard therapy:
+
+| Time (months) | Censoring (0=event, 1=censored) | Group (New/Standard) |
+|---------------|--------------------------------|---------------------|
+| 10            | 0                              | New                 |
+| 15            | 1                              | New                 |
+| 7             | 0                              | Standard            |
+
+---
+
+## Summary
+
+| Concept                | Purpose                                    |
+|-----------------------|--------------------------------------------|
+| **Survival Function**  | Probability of surviving past time t        |
+| **Hazard Function**    | Instantaneous event rate                   |
+| **Kaplan-Meier**       | Estimate survival function non-parametrically |
+| **Log-Rank Test**      | Compare survival curves between groups     |
+| **Cox Model**          | Assess covariate effects on survival       |
+| **Censoring**          | Account for incomplete data                |
+
+---
+
+## 📚 References
+
+- Kleinbaum, D. G., & Klein, M. (2012). *Survival Analysis: A Self-Learning Text*. Springer.
+- Hosmer, D. W., Lemeshow, S., & May, S. (2008). *Applied Survival Analysis: Regression Modeling of Time-to-Event Data*. Wiley.
+- ClinicalTrials.gov — Understanding survival endpoints in clinical trials.
+
+---
 
 🧬 *Survival analysis is a fundamental tool to understand and compare the prognosis of patients under different treatments, essential for evidence-based medicine.*
