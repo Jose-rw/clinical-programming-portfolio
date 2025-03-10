@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Survival Analysis: Theory and Applications – Clinical Programming Portfolio</title>
+<title>survival-theory – Clinical Programming Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,25 +148,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Survival Analysis: Theory and Applications</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="survival-analysis-theory-and-applications" class="level1">
@@ -174,7 +158,236 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-is-survival-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-survival-analysis">What is Survival Analysis?</h2>
 <p>Survival analysis is a branch of statistics that deals with the <strong>analysis of time-to-event data</strong>. In clinical trials, the <em>event</em> usually refers to a specific outcome such as <strong>death</strong>, <strong>disease recurrence</strong>, <strong>recovery</strong>, or <strong>relapse</strong>. The goal is to analyze <strong>the time it takes for the event to occur</strong>, while accounting for the fact that not all participants may experience the event during the study period (censoring).</p>
-<p>…</p>
+<hr>
+</section>
+<section id="why-is-survival-analysis-important-in-clinical-trials" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-survival-analysis-important-in-clinical-trials">Why is Survival Analysis Important in Clinical Trials?</h2>
+<p>In many medical studies, especially in oncology and chronic disease research, it is not sufficient to know whether a patient experienced an event, but <strong>when</strong> the event happened is crucial.</p>
+<p>Survival analysis allows us to:</p>
+<ul>
+<li><strong>Estimate the probability of surviving past a certain time point.</strong></li>
+<li><strong>Compare survival rates between treatment groups.</strong></li>
+<li><strong>Assess the effect of covariates (e.g., age, treatment, biomarkers) on survival.</strong></li>
+<li><strong>Handle censored data</strong>, where the outcome is not observed for all patients (e.g., lost to follow-up).</li>
+</ul>
+<hr>
+</section>
+<section id="how-is-survival-analysis-performed" class="level2">
+<h2 class="anchored" data-anchor-id="how-is-survival-analysis-performed">How is Survival Analysis Performed?</h2>
+<section id="from-sdtm-to-adam-preparing-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="from-sdtm-to-adam-preparing-the-data">1. <strong>From SDTM to ADaM: Preparing the Data</strong></h3>
+<p>In clinical trials, survival analysis typically starts from SDTM datasets such as:</p>
+<ul>
+<li><strong>AE (Adverse Events)</strong> for event-related data.</li>
+<li><strong>DS (Disposition)</strong> to identify death or discontinuation dates.</li>
+<li><strong>EX (Exposure)</strong> for treatment start and end dates.</li>
+</ul>
+<p>These SDTM datasets are transformed into ADaM datasets, especially:</p>
+<ul>
+<li><strong>ADSL (Subject-Level Analysis Dataset)</strong>: contains baseline and demographic information.</li>
+<li><strong>ADAE (Analysis of Adverse Events Dataset)</strong>: provides detailed event information.</li>
+<li><strong>ADTTE (Time-to-Event Dataset)</strong>: specialized dataset to analyze survival or time-to-event outcomes.</li>
+</ul>
+</section>
+<section id="defining-time-and-event-variables" class="level3">
+<h3 class="anchored" data-anchor-id="defining-time-and-event-variables">2. <strong>Defining Time and Event Variables</strong></h3>
+<ul>
+<li><strong>Time-to-event</strong>: typically derived as the number of days from randomization/treatment start (e.g., TRTSDT) to the event date or censoring date (e.g., DTHDT, LSTALVDT).</li>
+<li><strong>Event indicator</strong>: binary variable (1=event occurred, 0=censored).</li>
+</ul>
+</section>
+<section id="analysis-in-sas-and-r" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-in-sas-and-r">3. <strong>Analysis in SAS and R</strong></h3>
+<p>Both SAS and R allow estimation of survival functions and hazard models:</p>
+<section id="in-sas" class="level4">
+<h4 class="anchored" data-anchor-id="in-sas">In <strong>SAS</strong>:</h4>
+<ul>
+<li><code>PROC LIFETEST</code>: Kaplan-Meier estimation, log-rank test.</li>
+<li><code>PROC PHREG</code>: Cox Proportional Hazards model.</li>
+</ul>
+</section>
+<section id="in-r" class="level4">
+<h4 class="anchored" data-anchor-id="in-r">In <strong>R</strong>:</h4>
+<ul>
+<li><code>survival</code> package: <code>survfit()</code> for Kaplan-Meier, <code>coxph()</code> for Cox model.</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="what-results-are-expected-and-how-to-interpret-them" class="level2">
+<h2 class="anchored" data-anchor-id="what-results-are-expected-and-how-to-interpret-them">What Results Are Expected and How to Interpret Them?</h2>
+<section id="variables-and-outputs" class="level3">
+<h3 class="anchored" data-anchor-id="variables-and-outputs">Variables and Outputs:</h3>
+<ul>
+<li><strong>Kaplan-Meier survival curves</strong>: Estimated survival probabilities over time.</li>
+<li><strong>Median survival time</strong>: Time by which 50% of patients are expected to experience the event.</li>
+<li><strong>Hazard Ratio (HR)</strong>: Comparing risk between groups, with confidence intervals.</li>
+<li><strong>Log-Rank test p-value</strong>: To determine if survival curves differ significantly.</li>
+</ul>
+</section>
+<section id="example-of-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="example-of-interpretation">Example of Interpretation:</h3>
+<ul>
+<li><strong>HR &lt; 1</strong>: Treatment reduces the risk of event compared to control.</li>
+<li><strong>HR &gt; 1</strong>: Treatment increases the risk.</li>
+<li><strong>95% CI</strong>: If it does not include 1, the result is statistically significant.</li>
+<li><strong>Kaplan-Meier plot</strong>: Visual representation of survival probability over time by group.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="key-concepts-and-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-and-definitions">Key Concepts and Definitions</h2>
+<section id="time-to-event-data" class="level3">
+<h3 class="anchored" data-anchor-id="time-to-event-data">1. <strong>Time-to-Event Data</strong></h3>
+<ul>
+<li>Data measuring the duration until a specified event occurs.</li>
+<li>Example: Time from randomization to death.</li>
+</ul>
+</section>
+<section id="censoring" class="level3">
+<h3 class="anchored" data-anchor-id="censoring">2. <strong>Censoring</strong></h3>
+<ul>
+<li>Occurs when we do not observe the event for a patient during the study period.</li>
+<li>Types:
+<ul>
+<li><strong>Right censoring</strong>: Patient leaves the study or the study ends before the event occurs.</li>
+<li><strong>Left censoring</strong>: Event occurs before observation begins (less common in clinical trials).</li>
+</ul></li>
+</ul>
+</section>
+<section id="survival-function-st" class="level3">
+<h3 class="anchored" data-anchor-id="survival-function-st">3. <strong>Survival Function (S(t))</strong></h3>
+<ul>
+<li>Probability of surviving beyond time t.</li>
+<li>Mathematically: ( S(t) = P(T &gt; t) )</li>
+</ul>
+</section>
+<section id="hazard-function-ht" class="level3">
+<h3 class="anchored" data-anchor-id="hazard-function-ht">4. <strong>Hazard Function (h(t))</strong></h3>
+<ul>
+<li>Instantaneous risk of experiencing the event at time t, given survival up to time t.</li>
+<li>Mathematically: ( h(t) = _{t } )</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="common-statistical-methods" class="level2">
+<h2 class="anchored" data-anchor-id="common-statistical-methods">Common Statistical Methods</h2>
+<section id="kaplan-meier-estimator" class="level3">
+<h3 class="anchored" data-anchor-id="kaplan-meier-estimator">1. <strong>Kaplan-Meier Estimator</strong></h3>
+<ul>
+<li>Non-parametric method to estimate the survival function.</li>
+<li>Accounts for censored data.</li>
+</ul>
+</section>
+<section id="log-rank-test" class="level3">
+<h3 class="anchored" data-anchor-id="log-rank-test">2. <strong>Log-Rank Test</strong></h3>
+<ul>
+<li>Statistical test to compare survival curves of two or more groups.</li>
+</ul>
+</section>
+<section id="cox-proportional-hazards-model" class="level3">
+<h3 class="anchored" data-anchor-id="cox-proportional-hazards-model">3. <strong>Cox Proportional Hazards Model</strong></h3>
+<ul>
+<li>Semiparametric model to estimate the effect of covariates on survival time.</li>
+</ul>
+</section>
+<section id="parametric-models" class="level3">
+<h3 class="anchored" data-anchor-id="parametric-models">4. <strong>Parametric Models</strong></h3>
+<ul>
+<li>Survival models assuming a specific distribution for survival times (e.g., exponential, Weibull).</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="example-survival-in-oncology" class="level2">
+<h2 class="anchored" data-anchor-id="example-survival-in-oncology">Example: Survival in Oncology</h2>
+<p>Consider a clinical trial comparing a new chemotherapy vs.&nbsp;standard therapy:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 47%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time (months)</th>
+<th>Censoring (0=event, 1=censored)</th>
+<th>Group (New/Standard)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>0</td>
+<td>New</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>1</td>
+<td>New</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>0</td>
+<td>Standard</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Survival Function</strong></td>
+<td>Probability of surviving past time t</td>
+</tr>
+<tr class="even">
+<td><strong>Hazard Function</strong></td>
+<td>Instantaneous event rate</td>
+</tr>
+<tr class="odd">
+<td><strong>Kaplan-Meier</strong></td>
+<td>Estimate survival function non-parametrically</td>
+</tr>
+<tr class="even">
+<td><strong>Log-Rank Test</strong></td>
+<td>Compare survival curves between groups</td>
+</tr>
+<tr class="odd">
+<td><strong>Cox Model</strong></td>
+<td>Assess covariate effects on survival</td>
+</tr>
+<tr class="even">
+<td><strong>Censoring</strong></td>
+<td>Account for incomplete data</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">📚 References</h2>
+<ul>
+<li>Kleinbaum, D. G., &amp; Klein, M. (2012). <em>Survival Analysis: A Self-Learning Text</em>. Springer.</li>
+<li>Hosmer, D. W., Lemeshow, S., &amp; May, S. (2008). <em>Applied Survival Analysis: Regression Modeling of Time-to-Event Data</em>. Wiley.</li>
+<li>ClinicalTrials.gov — Understanding survival endpoints in clinical trials.</li>
+</ul>
+<hr>
 <p>🧬 <em>Survival analysis is a fundamental tool to understand and compare the prognosis of patients under different treatments, essential for evidence-based medicine.</em></p>
 
 
