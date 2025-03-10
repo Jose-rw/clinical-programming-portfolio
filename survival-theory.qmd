@@ -1,3 +1,9 @@
+
+---
+title: "Survival Analysis: Theory and Applications"
+format: html
+---
+
 # 📊 Survival Analysis: Theory and Applications
 
 ## What is Survival Analysis?

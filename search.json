@@ -2,70 +2,70 @@
   {
     "objectID": "survival-theory.html",
     "href": "survival-theory.html",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Survival analysis is a branch of statistics that deals with the analysis of time-to-event data. In clinical trials, the event usually refers to a specific outcome such as death, disease recurrence, recovery, or relapse. The goal is to analyze the time it takes for the event to occur, while accounting for the fact that not all participants may experience the event during the study period (censoring).\n\n\n\n\nIn many medical studies, especially in oncology and chronic disease research, it is not sufficient to know whether a patient experienced an event, but when the event happened is crucial.\nSurvival analysis allows us to:\n\nEstimate the probability of surviving past a certain time point.\nCompare survival rates between treatment groups.\nAssess the effect of covariates (e.g., age, treatment, biomarkers) on survival.\nHandle censored data, where the outcome is not observed for all patients (e.g., lost to follow-up).\n\n\n\n\n\n\n\nIn clinical trials, survival analysis typically starts from SDTM datasets such as:\n\nAE (Adverse Events) for event-related data.\nDS (Disposition) to identify death or discontinuation dates.\nEX (Exposure) for treatment start and end dates.\n\nThese SDTM datasets are transformed into ADaM datasets, especially:\n\nADSL (Subject-Level Analysis Dataset): contains baseline and demographic information.\nADAE (Analysis of Adverse Events Dataset): provides detailed event information.\nADTTE (Time-to-Event Dataset): specialized dataset to analyze survival or time-to-event outcomes.\n\n\n\n\n\nTime-to-event: typically derived as the number of days from randomization/treatment start (e.g., TRTSDT) to the event date or censoring date (e.g., DTHDT, LSTALVDT).\nEvent indicator: binary variable (1=event occurred, 0=censored).\n\n\n\n\nBoth SAS and R allow estimation of survival functions and hazard models:\n\n\n\nPROC LIFETEST: Kaplan-Meier estimation, log-rank test.\nPROC PHREG: Cox Proportional Hazards model.\n\n\n\n\n\nsurvival package: survfit() for Kaplan-Meier, coxph() for Cox model.\n\n\n\n\n\n\n\n\n\n\nKaplan-Meier survival curves: Estimated survival probabilities over time.\nMedian survival time: Time by which 50% of patients are expected to experience the event.\nHazard Ratio (HR): Comparing risk between groups, with confidence intervals.\nLog-Rank test p-value: To determine if survival curves differ significantly.\n\n\n\n\n\nHR &lt; 1: Treatment reduces the risk of event compared to control.\nHR &gt; 1: Treatment increases the risk.\n95% CI: If it does not include 1, the result is statistically significant.\nKaplan-Meier plot: Visual representation of survival probability over time by group.\n\n\n\n\n\n\n\n\n\nData measuring the duration until a specified event occurs.\nExample: Time from randomization to death.\n\n\n\n\n\nOccurs when we do not observe the event for a patient during the study period.\nTypes:\n\nRight censoring: Patient leaves the study or the study ends before the event occurs.\nLeft censoring: Event occurs before observation begins (less common in clinical trials).\n\n\n\n\n\n\nProbability of surviving beyond time t.\nMathematically: ( S(t) = P(T &gt; t) )\n\n\n\n\n\nInstantaneous risk of experiencing the event at time t, given survival up to time t.\nMathematically: ( h(t) = _{t } )\n\n\n\n\n\n\n\n\n\nNon-parametric method to estimate the survival function.\nAccounts for censored data.\n\n\n\n\n\nStatistical test to compare survival curves of two or more groups.\n\n\n\n\n\nSemiparametric model to estimate the effect of covariates on survival time.\n\n\n\n\n\nSurvival models assuming a specific distribution for survival times (e.g., exponential, Weibull).\n\n\n\n\n\n\nConsider a clinical trial comparing a new chemotherapy vs. standard therapy:\n\n\n\n\n\n\n\n\nTime (months)\nCensoring (0=event, 1=censored)\nGroup (New/Standard)\n\n\n\n\n10\n0\nNew\n\n\n15\n1\nNew\n\n\n7\n0\nStandard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConcept\nPurpose\n\n\n\n\nSurvival Function\nProbability of surviving past time t\n\n\nHazard Function\nInstantaneous event rate\n\n\nKaplan-Meier\nEstimate survival function non-parametrically\n\n\nLog-Rank Test\nCompare survival curves between groups\n\n\nCox Model\nAssess covariate effects on survival\n\n\nCensoring\nAccount for incomplete data\n\n\n\n\n\n\n\n\nKleinbaum, D. G., & Klein, M. (2012). Survival Analysis: A Self-Learning Text. Springer.\nHosmer, D. W., Lemeshow, S., & May, S. (2008). Applied Survival Analysis: Regression Modeling of Time-to-Event Data. Wiley.\nClinicalTrials.gov — Understanding survival endpoints in clinical trials.\n\n\n🧬 Survival analysis is a fundamental tool to understand and compare the prognosis of patients under different treatments, essential for evidence-based medicine."
   },
   {
     "objectID": "survival-theory.html#what-is-survival-analysis",
     "href": "survival-theory.html#what-is-survival-analysis",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Survival analysis is a branch of statistics that deals with the analysis of time-to-event data. In clinical trials, the event usually refers to a specific outcome such as death, disease recurrence, recovery, or relapse. The goal is to analyze the time it takes for the event to occur, while accounting for the fact that not all participants may experience the event during the study period (censoring)."
   },
   {
     "objectID": "survival-theory.html#why-is-survival-analysis-important-in-clinical-trials",
     "href": "survival-theory.html#why-is-survival-analysis-important-in-clinical-trials",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "In many medical studies, especially in oncology and chronic disease research, it is not sufficient to know whether a patient experienced an event, but when the event happened is crucial.\nSurvival analysis allows us to:\n\nEstimate the probability of surviving past a certain time point.\nCompare survival rates between treatment groups.\nAssess the effect of covariates (e.g., age, treatment, biomarkers) on survival.\nHandle censored data, where the outcome is not observed for all patients (e.g., lost to follow-up)."
   },
   {
     "objectID": "survival-theory.html#how-is-survival-analysis-performed",
     "href": "survival-theory.html#how-is-survival-analysis-performed",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "In clinical trials, survival analysis typically starts from SDTM datasets such as:\n\nAE (Adverse Events) for event-related data.\nDS (Disposition) to identify death or discontinuation dates.\nEX (Exposure) for treatment start and end dates.\n\nThese SDTM datasets are transformed into ADaM datasets, especially:\n\nADSL (Subject-Level Analysis Dataset): contains baseline and demographic information.\nADAE (Analysis of Adverse Events Dataset): provides detailed event information.\nADTTE (Time-to-Event Dataset): specialized dataset to analyze survival or time-to-event outcomes.\n\n\n\n\n\nTime-to-event: typically derived as the number of days from randomization/treatment start (e.g., TRTSDT) to the event date or censoring date (e.g., DTHDT, LSTALVDT).\nEvent indicator: binary variable (1=event occurred, 0=censored).\n\n\n\n\nBoth SAS and R allow estimation of survival functions and hazard models:\n\n\n\nPROC LIFETEST: Kaplan-Meier estimation, log-rank test.\nPROC PHREG: Cox Proportional Hazards model.\n\n\n\n\n\nsurvival package: survfit() for Kaplan-Meier, coxph() for Cox model."
   },
   {
     "objectID": "survival-theory.html#what-results-are-expected-and-how-to-interpret-them",
     "href": "survival-theory.html#what-results-are-expected-and-how-to-interpret-them",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Kaplan-Meier survival curves: Estimated survival probabilities over time.\nMedian survival time: Time by which 50% of patients are expected to experience the event.\nHazard Ratio (HR): Comparing risk between groups, with confidence intervals.\nLog-Rank test p-value: To determine if survival curves differ significantly.\n\n\n\n\n\nHR &lt; 1: Treatment reduces the risk of event compared to control.\nHR &gt; 1: Treatment increases the risk.\n95% CI: If it does not include 1, the result is statistically significant.\nKaplan-Meier plot: Visual representation of survival probability over time by group."
   },
   {
     "objectID": "survival-theory.html#key-concepts-and-definitions",
     "href": "survival-theory.html#key-concepts-and-definitions",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Data measuring the duration until a specified event occurs.\nExample: Time from randomization to death.\n\n\n\n\n\nOccurs when we do not observe the event for a patient during the study period.\nTypes:\n\nRight censoring: Patient leaves the study or the study ends before the event occurs.\nLeft censoring: Event occurs before observation begins (less common in clinical trials).\n\n\n\n\n\n\nProbability of surviving beyond time t.\nMathematically: ( S(t) = P(T &gt; t) )\n\n\n\n\n\nInstantaneous risk of experiencing the event at time t, given survival up to time t.\nMathematically: ( h(t) = _{t } )"
   },
   {
     "objectID": "survival-theory.html#common-statistical-methods",
     "href": "survival-theory.html#common-statistical-methods",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Non-parametric method to estimate the survival function.\nAccounts for censored data.\n\n\n\n\n\nStatistical test to compare survival curves of two or more groups.\n\n\n\n\n\nSemiparametric model to estimate the effect of covariates on survival time.\n\n\n\n\n\nSurvival models assuming a specific distribution for survival times (e.g., exponential, Weibull)."
   },
   {
     "objectID": "survival-theory.html#example-survival-in-oncology",
     "href": "survival-theory.html#example-survival-in-oncology",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Consider a clinical trial comparing a new chemotherapy vs. standard therapy:\n\n\n\n\n\n\n\n\nTime (months)\nCensoring (0=event, 1=censored)\nGroup (New/Standard)\n\n\n\n\n10\n0\nNew\n\n\n15\n1\nNew\n\n\n7\n0\nStandard"
   },
   {
     "objectID": "survival-theory.html#summary",
     "href": "survival-theory.html#summary",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Concept\nPurpose\n\n\n\n\nSurvival Function\nProbability of surviving past time t\n\n\nHazard Function\nInstantaneous event rate\n\n\nKaplan-Meier\nEstimate survival function non-parametrically\n\n\nLog-Rank Test\nCompare survival curves between groups\n\n\nCox Model\nAssess covariate effects on survival\n\n\nCensoring\nAccount for incomplete data"
   },
   {
     "objectID": "survival-theory.html#references",
     "href": "survival-theory.html#references",
-    "title": "📊 Survival Analysis: Theory and Applications",
+    "title": "Survival Analysis: Theory and Applications",
     "section": "",
     "text": "Kleinbaum, D. G., & Klein, M. (2012). Survival Analysis: A Self-Learning Text. Springer.\nHosmer, D. W., Lemeshow, S., & May, S. (2008). Applied Survival Analysis: Regression Modeling of Time-to-Event Data. Wiley.\nClinicalTrials.gov — Understanding survival endpoints in clinical trials.\n\n\n🧬 Survival analysis is a fundamental tool to understand and compare the prognosis of patients under different treatments, essential for evidence-based medicine."
   },
